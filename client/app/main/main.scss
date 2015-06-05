@@ -1053,3 +1053,47 @@ ul#portfolio-filter li a, ul#portfolio-filter li a:hover, ul#portfolio-filter li
     width: 14px;
     height: 14px;
 }
+
+/**************************** RESPONSIVE *************************************/
+@media (max-width: $screen-sm) {
+  .main-title {
+    text-align: center;
+  }
+  .magical.iphone.open img{
+    height: 231px;
+  }
+  .stack-list {
+    display: none;
+  }
+  #pillow {
+    background: url("/images/nmnl-mobile.jpg");
+    background-size: cover;
+    background-position: 0% -47px;
+  }
+  #pillow .description, #timeless .description {
+    width: 100%;
+  }
+  #clients-partners li {
+    width: 100%;
+    height: 50px;
+  }
+  .client-list li {
+    width:100%;
+  }
+  .footer > div > div > div {
+    text-align: center;
+  }
+  ul#portfolio-filter {
+    height: 100%;
+    padding-left: 0px;
+    margin-top: 0px;
+    padding-top:0px;
+  }
+  ul#portfolio-filter li {
+    width: 100%;
+    display: inline-block
+  }
+  #timeless .artwork-container {
+    display: none;
+  }
+}
