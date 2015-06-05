@@ -1,0 +1,44 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="title"> 
+  <h1 class="in-view">Una empresa innovadora<span>&nbsp;</span></h1><br/>
+  <h2 class="in-view">Ubicados en Mérida, Yucatán</h2>
+</div>
+<section class="wrapper wrapper-about">
+  <div class="col-md-6">
+
+
+
+    <div id="contact" class="section contact" ng-controller="ContactCtrl">      
+      <div class="section-content">
+            <div class="col-md-10  col-md-offset-1">
+              <div class="contact-form">
+                <div class="alert"></div>
+                <form id="contact-form" name="FormTravel" novalidate>
+                  <div class="center">
+                    <h5 class="error" >{{error}}</h5>
+                    <h5 class="sucess" >{{sucess}}</h5>
+                  </div>
+                  <div class="form-group">                                        
+                    <input type="text" ng-model="contact.name" class="form-control" name="name" placeholder="Nombre*" validator="required" valid-method="blur" required-error-message="Tienes que dejar tu nombre" >
+                  </div>
+                  <div class="form-group">                    
+                    <input type="email" ng-model="contact.email" class="form-control" name="email" placeholder="Email*" validator="email" valid-method="blur" email-error-message="Tienes que dejar tu email">
+                  </div>                  
+                  <div class="form-group">                    
+                    <textarea ng-model="contact.body" name="message" class="form-control" placeholder="Mensaje*" validator="required" valid-method="blur" required-error-message="Tienes que dejar un mensaje" ></textarea>
+                  </div>                  
+                  <button type="submit" class="btn btn-primary btn" id="submit-button" ng-click="formTravel.submit(FormTravel)" loading-btn="respCreate" >
+                    <i class="fa loading-icon"></i> <span>Enviar</span>
+                  </button>                  
+                </form>
+              </div>
+            </div>
+      </div>
+    </div>
+    </div>
+    
+  </div>
+  <div class="col-md-6 nopadding" ng-controller="mapController">
+    <div id="map-canvas" ng-init="initialize()" style="position: relative; overflow: hidden; transform: translateZ(0px) translateZ(0px) translateZ(0px) translateZ(0px); background-color: rgb(229, 227, 223);"></div>
+  </div>
+</section>

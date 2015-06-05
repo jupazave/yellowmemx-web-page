@@ -1,0 +1,47 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="title"> 
+  <h1 class="in-view">Nuestro portafolio<span>&nbsp;</span></h1> <br/>
+  <h2 class="in-view">Construyendo experiencias digitales</h2>
+</div>
+
+<div class="col-md-12 text-center">
+  <ul id="portfolio-filter">
+    <li><a href ng-click="category = 'featured'" ng-class="category == 'featured' ? 'active':''" >Destacado</a></li>
+    <li><a href ng-click="category = 'startup'" ng-class="category == 'startup' ? 'active':''" >Startups</a></li>
+    <li><a href ng-click="category = 'website'" ng-class="category == 'website' ? 'active':''" >Páginas Web</a></li>
+    <li><a href ng-click="category = 'webapp'" ng-class="category == 'webapp' ? 'active':''" >Sistemas Web</a></li>
+    <li><a href ng-click="category = 'apps'" ng-class="category == 'apps' ? 'active':''" >Apps</a></li>
+  </ul>
+</div>
+<section id="section-3">
+    <div class="details animate-repeat animate-show" ng-show="working" >
+      <div class="col-md-7 nopadding" >
+        <img ng-src="assets/images/portfolio/{{working.img}}" alt="work">
+      </div>
+      <div class="col-md-4 work-resume">
+        <h1>{{working.title}}</h1>
+        <div class="close" >
+          <a href ng-click="selectWork()" class="close-icon">X</a>
+        </div>
+        <div class="clear"></div>
+        <hr>
+        <p><b>Tecnologías:</b> {{working.tools}}</p>
+        <p><b>URL:</b> <a href="{{working.link}}">{{working.link}}</a></p>
+        <hr>
+        <!--<p>{{working.description}}</p>-->
+      </div>
+    </div>
+  <div class="container-portfolio" id="portfolio-list">
+    <div class="row">      
+      <div class="col-md-6 row-portfolio animate-repeat" ng-repeat="work in works | filter:category" >
+        <a href ng-click="selectWork(work)" class="portfolio">
+          <img class="img-responsive" ng-src="assets/images/portfolio/{{work.img}}" alt="work">
+          <div class="content"> 
+            <h2>{{work.title}}</h2> 
+            <h4>{{work.tools}}</h4> 
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>  
+</section>
