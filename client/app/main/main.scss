@@ -1066,7 +1066,7 @@ ul#portfolio-filter li a, ul#portfolio-filter li a:hover, ul#portfolio-filter li
     display: none;
   }
   #pillow {
-    background: url("/images/nmnl-mobile.jpg");
+    //background: url("/images/nmnl-mobile.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -1094,6 +1094,13 @@ ul#portfolio-filter li a, ul#portfolio-filter li a:hover, ul#portfolio-filter li
     display: inline-block
   }
   #timeless .artwork-container {
-    display: none;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    height: 615px;
+
+    img{
+      margin: 0 25px;
+    }
   }
 }
